@@ -1,0 +1,34 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wphobby-styled-list .fa-ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem;
+	counter-reset: hb-styled-counter;
+}
+
+.wphobby-styled-list .fa-ul>li{
+	display: flex;
+	align-items: center;
+	margin: 0 0 1rem;
+	counter-increment: ht-styled-counter;
+	position: relative;
+}
+
+.wphobby-styled-list .fa-ul>li::before{
+	flex-shrink: 0;
+	align-self: flex-start;
+	content: counter(ht-styled-counter);
+	color: #fff;
+	font-size: 1rem;
+	--size: 1.5em;
+	line-height: var(--size);
+	width: var(--size);
+	height: var(--size);
+	text-align: center;
+	margin: 0 1rem 0 0;
+}
